@@ -84,10 +84,10 @@ n=6
 print(find_pairs_of_numbers(num_list,n))
 
 
-#PF-Assgn-35 ERROR in sorting
+#PF-Assgn-35
 
 #Global variable
-list_of_marks=[12,18,25,24,2,5,18,20,20,21]
+list_of_marks=(12,18,25,24,2,5,18,20,20,21)
 
 def find_more_than_average():
     avg=0
@@ -103,8 +103,7 @@ def find_more_than_average():
     return avg
 
 def sort_marks():
-    list_of_marks.sort()
-    return list_of_marks
+    return sorted.(list_of_marks)
 
 def generate_frequency():
     listt=[]
