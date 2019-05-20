@@ -103,7 +103,7 @@ def find_more_than_average():
     return avg
 
 def sort_marks():
-    return sorted.(list_of_marks)
+    return sorted(list_of_marks)
 
 def generate_frequency():
     listt=[]
