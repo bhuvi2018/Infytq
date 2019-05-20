@@ -82,3 +82,40 @@ def find_pairs_of_numbers(num_list,n):
 num_list=[1, 2, 4, 5, 6]
 n=6
 print(find_pairs_of_numbers(num_list,n))
+
+
+#PF-Assgn-35
+
+#Global variable
+list_of_marks=[12,18,25,24,2,5,18,20,20,21]
+
+def find_more_than_average():
+    avg=0
+    sum=0
+    c=0
+    for i in range(0,len(list_of_marks)):
+        sum+=list_of_marks[i]
+    avg=sum/len(list_of_marks)
+    for i in range(0,len(list_of_marks)):
+        if(avg<list_of_marks[i]):
+            c+=1
+    avg=c/len(list_of_marks)*100
+    return avg
+
+def sort_marks():
+    list_of_marks.sort()
+    return list_of_marks
+
+def generate_frequency():
+    listt=[]
+    for i in range(0,26):
+        c=0
+        for j in range(0,len(list_of_marks)):
+            if (list_of_marks[j]==i):
+                c+=1
+        listt.append(c)
+    return listt
+
+print(find_more_than_average())
+print(generate_frequency())
+print(sort_marks())
