@@ -121,14 +121,15 @@ print(generate_frequency())
 print(sort_marks())
 
 
-#PF-Assgn-36 Error
+#PF-Assgn-36
 def create_largest_number(number_list):
     ans=""
     number_list.sort()
     for i in range(len(number_list)-1,-1,-1):
         ans+=str(number_list[i])
-    return ans
+        an=int(ans)
+    return an
 
-number_list=[10,87,67]
+number_list=[23,34,55]
 largest_number=create_largest_number(number_list)
 print(largest_number)
