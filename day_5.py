@@ -84,7 +84,7 @@ n=6
 print(find_pairs_of_numbers(num_list,n))
 
 
-#PF-Assgn-35
+#PF-Assgn-35 ERROR in sorting
 
 #Global variable
 list_of_marks=[12,18,25,24,2,5,18,20,20,21]
