@@ -119,3 +119,16 @@ def generate_frequency():
 print(find_more_than_average())
 print(generate_frequency())
 print(sort_marks())
+
+
+#PF-Assgn-36 Error
+def create_largest_number(number_list):
+    ans=""
+    number_list.sort()
+    for i in range(len(number_list)-1,-1,-1):
+        ans+=str(number_list[i])
+    return ans
+
+number_list=[10,87,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
