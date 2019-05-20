@@ -69,3 +69,16 @@ merged_list=merge_lists(list1=[1,2,3,4,1] ,list2=[2,3,4,5,4,6])
 print(merged_list)
 sorted_merged_list=sort_list(merged_list)
 print(sorted_merged_list)
+
+
+#PF-Assgn-34
+def find_pairs_of_numbers(num_list,n):
+    c=0
+    for i in range(0,len(num_list)):
+        for j in range(i+1,len(num_list)):
+            if(num_list[i]+num_list[j]==n):
+                c+=1
+    return c
+num_list=[1, 2, 4, 5, 6]
+n=6
+print(find_pairs_of_numbers(num_list,n))
