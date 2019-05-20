@@ -1,3 +1,19 @@
+#PF-Exer-22
+
+def generate_ticket(airline,source,destination,no_of_passengers):
+    ticket_number_list=[]
+    i=int(0)
+    #Write your logic here
+    for i in range(0,no_of_passengers):
+        s=int(101+i)
+        ticket_number_list.append(airline+":"+source[0:3]+":"+destination[0:3]+":"+str(s))
+    #Use the below return statement wherever applicable
+    return ticket_number_list[-5:]
+
+#Provide different values for airline,source,destination,no_of_passengers and test your program
+print(generate_ticket("AI","Bangalore","London",7))
+
+
 #PF-Exer-23
 def translate(bilingual_dict,english_words_list):
     swedish_words_list=[]
