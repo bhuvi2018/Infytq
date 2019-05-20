@@ -153,48 +153,28 @@ for counter in range(1,4):
 
 def find_max(num1, num2):
     max_num=-1
-    if(num1>=num2):
-        return max_num
-    list=[]
+    l=[]
     c=0
-    
     # Write your logic here
     for i in range(num1,num2+1):
-        if(i>=10 and i<=99):
-            if(i%3==0 and i%5==0):
-                list.append(i)
-                c=1
-    if(c==0):
-        return max_num
-    else:
-        return list[-1]
+        if(i%5==0 and num1<num2):
+            if(i<100 and i>=10):
+                t=i
+                s=0
+                while(i!=0 and i!=10):
+                    r=i%10
+                    s=s+r
+                    i=i//10
+                    if(s%3==0):
+                        l.append(t)
+                        c+=1
+    if(c!=0):
+        max_num=max(l)
+    return max_num
 
 #Provide different values for num1 and num2 and test your program.
-max_num=find_max(10,15)
-print(max_num)#PF-Assgn-28
-
-def find_max(num1, num2):
-    max_num=-1
-    if(num1>=num2):
-        return max_num
-    list=[]
-    c=0
-    
-    # Write your logic here
-    for i in range(num1,num2+1):
-        if(i>=10 and i<=99):
-            if(i%3==0 and i%5==0):
-                list.append(i)
-                c=1
-    if(c==0):
-        return max_num
-    else:
-        return list[-1]
-
-#Provide different values for num1 and num2 and test your program.
-max_num=find_max(10,15)
+max_num=find_max(2,14)
 print(max_num)
-
 
 #PF-Exer-15
 
