@@ -120,6 +120,19 @@ print(find_more_than_average())
 print(generate_frequency())
 print(sort_marks())
 
+#PF-Assgn-36
+def create_largest_number(number_list):
+    ans=""
+    number_list.sort()
+    for i in range(len(number_list)-1,-1,-1):
+        ans+=str(number_list[i])
+        an=int(ans)
+    return an
+
+number_list=[23,34,55]
+largest_number=create_largest_number(number_list)
+print(largest_number)
+
 
 #PF-Assgn-37
 
@@ -161,16 +174,34 @@ print(calculate_total_chocolates())
 reward_child(20,2)
 
 
+#PF-Assgn-38
 
-#PF-Assgn-36
-def create_largest_number(number_list):
-    ans=""
-    number_list.sort()
-    for i in range(len(number_list)-1,-1,-1):
-        ans+=str(number_list[i])
-        an=int(ans)
-    return an
+def check_double(number):
+    ss=[]
+    kk=[]
+    s=number
+    k=number*2
+    c=0
+    if(len(str(s))==len(str(k))):
+        while s!=0:
+            t1=s%10
+            s=s//10
+            t2=k%10
+            k=k//10
+            ss.append(t1)
+            kk.append(t2)
+        ss.sort()
+        kk.sort()
+        for i in range(0,len(kk)):
+                if(kk[i]==ss[i]):
+                    c+=1
+    else:
+        return False
 
-number_list=[23,34,55]
-largest_number=create_largest_number(number_list)
-print(largest_number)
+    if(c==len(ss)):
+        return True
+    else:
+        return False
+
+#Provide different values for number and test your program
+print(check_double(125874))
