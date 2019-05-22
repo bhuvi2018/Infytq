@@ -11,6 +11,32 @@ m_list=[1,2,3,4]
 print("Average marks:", find_average(m_list))
 
 
+#PF-Exer-32
+
+def human_pyramid(no_of_people):
+    n=0
+    for i in range(1,no_of_people+1,2):
+        n+=i*50
+    return n
+
+def find_maximum_people(max_weight):
+    no_of_people=1
+    weight=0
+    max=1
+    while(max_weight>=weight):
+        weight=human_pyramid(no_of_people)
+        if(weight<=max_weight):
+            max=no_of_people
+        no_of_people+=2
+    return max
+     
+    return no_of_people
+
+#Provide different values for max_weight and test your program
+max_people=find_maximum_people(1000)
+print(max_people)
+
+
 #PF-Assgn-40
 def is_palindrome(word):
     l=word.lower()
