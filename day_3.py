@@ -207,12 +207,12 @@ if(num1>num2)
 }
 while(true)
 {
-    if(min%num1==0 && min%num2==0)
+    if(min%num1==0 and min%num2==0)
     {
         console.log(min);
         break
     }
-    min++
+    min+=1
 }
 
 
