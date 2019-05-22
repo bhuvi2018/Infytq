@@ -35,8 +35,12 @@ def find_ten_substring(num_str):
             sum+=int(num_str[j])
             if(sum==10):
                 ret.append(num_str[i:j+1])
-    ret.sort()
-    return ret
+    return ret[::-1]
+
+num_str="3523014"
+print("The number is:",num_str)
+result_list=find_ten_substring(num_str)
+print(result_list)
 
 num_str="3523014"
 print("The number is:",num_str)
