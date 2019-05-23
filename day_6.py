@@ -123,3 +123,21 @@ def find_g(num):
     return g
 
 print(find_g(10))
+
+
+#PF-Assgn-43
+
+def find_smallest_number(num):
+    #start writing your code here
+    for i in range(1,1000):
+        c=0
+        for j in range(1,i+1):
+            if(i%j==0):
+                c+=1
+        if(c==num):
+            return i
+
+num=16
+print("The number of divisors :",num)
+result=find_smallest_number(num)
+print("The smallest number having",num," divisors:",result)
