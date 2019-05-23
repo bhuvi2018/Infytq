@@ -49,3 +49,19 @@ def count_names(name_list):
 #Provide different names in the list and test your program
 name_list=[Hat, Cat, Rabbit, Matter]
 count_names(name_list)
+
+
+#PF-Assgn-46
+
+def nearest_palindrome(number):
+    f=True
+    while(f):
+        number+=1
+        s=str(number)
+        s1=s[::-1]
+        if(s==s1):
+            f=False
+    return number
+
+number=12300
+print(nearest_palindrome(number))
