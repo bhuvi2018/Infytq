@@ -163,3 +163,23 @@ list_of_numbers=[1,2,2,3,3,3,4,4,4,4]
 list_of_duplicates=find_duplicates(list_of_numbers)
 print(list_of_duplicates)
 
+
+#PF-Assgn-44
+
+def find_duplicates(list_of_numbers):
+    #start writing your code here
+    a=[]
+    for i in range(len(list_of_numbers)):
+        for j in range(i+1,len(list_of_numbers)):
+            if(list_of_numbers[i]==list_of_numbers[j]):
+                if(list_of_numbers[j] in a):
+                    continue
+                else:
+                    a.append(list_of_numbers[i])
+                    break
+    return a
+                
+
+list_of_numbers=[1,2,2,3,3,3,4,4,4,4]
+list_of_duplicates=find_duplicates(list_of_numbers)
+print(list_of_duplicates)
