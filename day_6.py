@@ -29,30 +29,10 @@ def find_maximum_people(max_weight):
             max=no_of_people
         no_of_people+=2
     return max
-     
-    return no_of_people
 
 #Provide different values for max_weight and test your program
 max_people=find_maximum_people(1000)
 print(max_people)
-
-
-#PF-Assgn-43
-
-def find_smallest_number(num):
-    #start writing your code here
-    for i in range(1,1000):
-        c=0
-        for j in range(1,i+1):
-            if(i%j==0):
-                c+=1
-        if(c==num):
-            return i
-
-num=16
-print("The number of divisors :",num)
-result=find_smallest_number(num)
-print("The smallest number having",num," divisors:",result)
 
 #PF-Assgn-40
 def is_palindrome(word):
