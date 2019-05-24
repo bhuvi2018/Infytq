@@ -73,3 +73,29 @@ if(div(num1,num2)%10)==0:
     print("Divisible by 10")
 else:
     print("Not Divisible by 10")
+
+    
+#PF-Exer-41
+#This verification is based on string match.
+
+def sum_all(function, data):
+    sum=0
+    for i in data:
+        if(function(i)==1):
+            sum+=i
+    return sum
+
+list_of_nos=[100,200,300,500,1040]
+
+greater =lambda x: x>10
+
+divide = lambda s: s%10==0 and s<=100
+
+range_of_values = lambda s: s>=25 and s<=50
+
+
+#Use the below given print statements to display the output
+# Also, do not modify them for verification to work
+print(sum_all(greater,list_of_nos))
+print(sum_all(divide,list_of_nos))
+print(sum_all(range_of_values,list_of_nos))
