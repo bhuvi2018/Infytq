@@ -126,3 +126,31 @@ def find_correct(word_dict):
 
 word_dict={"THREE": "TRICE", "MOST": "MICE", "GET": "GOT", "COME": "COME"}
 print(find_correct(word_dict))
+
+
+#PF-Assgn-50 ERROR
+
+def sms_encoding(data):
+    list=[]
+    list=data.split(" ")
+    s=""
+    for i in list:
+        c=0
+        for j in i:
+            if(j=="a" or j=="e" or j=="i" or j=="o" or j=="u"):
+                c+=1
+            if(c==len(i)):
+                break
+            elif(j=="a" or j=="e" or j=="i" or j=="o" or j=="u"):
+                print(j)
+                print(i)
+                i.replace(j,"")
+                print(i)
+    for i in list:
+        s+=i
+        if(i!=len(list)-1):
+            s+=" "
+    return s
+    
+data="I love Python"
+print(sms_encoding(data))
