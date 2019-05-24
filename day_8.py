@@ -148,7 +148,6 @@ It takes strength for loving other souls,
 It takes courage to be loved.
 It takes strength for hiding our own pain,
 It takes courage to help if it is paining for someone.
-
 '''
 #Note: Triple quotes can be used to enclose Strings which has lines of text.
 
@@ -156,12 +155,14 @@ It takes courage to help if it is paining for someone.
 
 print(poem.count("v"))
 print()
-print(poem.replace("\n",""))
+k=poem
+k="\n"+k
+print(k.replace("\n"," ").lstrip())
 c=poem.replace("co","Co")
 c=c.replace("ch","Ch")
 print(c)
-poem=re.sub(r"ai...",r"ai*/*",poem)
-poem=re.sub(r"hi...",r"hi*/*",poem)
+poem=re.sub(r"ai...",r"ai*\*",poem)
+poem=re.sub(r"hi...",r"hi*\*",poem)
 print(poem)
 
 
