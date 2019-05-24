@@ -157,7 +157,7 @@ print(poem.count("v"))
 print()
 k=poem
 k="\n"+k
-print(k.replace("\n"," ").lstrip())
+print(k.replace("\n",""))
 c=poem.replace("co","Co")
 c=c.replace("ch","Ch")
 print(c)
