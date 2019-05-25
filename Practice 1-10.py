@@ -83,3 +83,20 @@ def list123(nums):
     
 nums=[1,2,3,4,5]
 print(list123(nums))
+
+
+#PF-Prac-7
+def seed_no(number,ref_no):
+    t=number
+    while(number!=0):
+        rem=number%10
+        t*=rem
+        number//=10
+    if(t==ref_no):
+        return True
+    else:
+        return False
+    
+number=123
+ref_no=738
+print(seed_no(number,ref_no))
