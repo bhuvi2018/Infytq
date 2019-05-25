@@ -59,4 +59,4 @@ def check_22(num_list):
             return True
     return False
         
-print(check_22([3,2,5,1,2,1,2]))
+print(check_22([3,2,5,1,2,1,2,2]))
