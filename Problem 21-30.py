@@ -83,3 +83,17 @@ def check_for_ten(num1,num2):
         return False
     
 print(check_for_ten(10,9))
+
+
+#PF-Tryout 28
+def sing_99_bottles():
+   for i in range(99,0,-1):
+        print(i,end="")
+        print(" bottles of beer on the wall, ",end="")
+        print(i,end="") 
+        print(" bottles of beer.")
+        print("Take one down, pass it around, ",end="")
+        print(int(i-1),end="")
+        print(" bottles of beer on the wall.")
+   
+sing_99_bottles()
