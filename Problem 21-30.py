@@ -110,6 +110,7 @@ def exchange_list(number_list):
         c=number_list[i]
         number_list[i]=number_list[d-k-1]
         number_list[d-k-1]=c
+        k=k+1
     for i in range(a):
         temp=number_list[i]
         number_list[i]=number_list[i+a]
