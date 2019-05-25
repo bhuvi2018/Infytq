@@ -75,7 +75,7 @@ Note: Setting the end parameter of the print function to empty string prevents t
 Example: print(".",end="") will maintain the cursor in the same line after displaying "."
 '''
 
-#PF-Tryout
+#PF-Tryout 22
 def diagonal_stars(number):
    #start writing your code here
     for i in range(0,number):
@@ -85,3 +85,18 @@ def diagonal_stars(number):
 
 number=6    
 diagonal_stars(number)
+
+
+#PF-Prac-23
+def divisible_by_sum(number):
+    temp=number
+    sum=0
+    while(number>0):
+        rem=number%10
+        number=number//10
+        sum+=rem
+    if(temp%sum==0):
+        return True
+    else:
+        return False
+
