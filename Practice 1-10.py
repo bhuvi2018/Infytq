@@ -117,3 +117,17 @@ def calculate_net_amount(trans_list):
 
 trans_list=["D:300","D:200","W:200","D:100"]
 print(calculate_net_amount(trans_list))
+
+
+#PF-Prac-9
+def generate_dict(number):
+	#start writing your code here
+	new_dict={}
+	for i in range(1,number+1):
+	    new_dict[i]=i**2
+
+	
+	return new_dict
+
+number=10
+print(generate_dict(number))
