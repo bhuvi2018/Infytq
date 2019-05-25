@@ -14,3 +14,14 @@ def sum_of_elements(num_list,number):
 num_list=[1,2,1,2]
 number=2
 print(sum_of_elements(num_list, number))
+
+
+#PF-Prac-37
+def sum_of_list(num_list):
+    if(len(num_list)>1):
+        return num_list[0] + sum_of_list(num_list[1:])
+    else:
+        return num_list[0]
+num_list=[44,23,77,11,89,3]
+result=sum_of_list(num_list)
+print("Sum of the elements:",result)
