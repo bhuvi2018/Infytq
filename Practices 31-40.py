@@ -15,6 +15,18 @@ num_list=[1,2,1,2]
 number=2
 print(sum_of_elements(num_list, number))
 
+#PF-Prac-32
+def check_squares(number):
+    for i in range(1,10000):
+        for j in range(i+1,10000):
+            if(i*i + j*j ==number):
+                return True
+    return False
+
+
+number=68
+print(check_squares(number))
+
 
 #PF-Prac-37
 def sum_of_list(num_list):
