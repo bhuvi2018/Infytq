@@ -92,3 +92,30 @@ print("Rows:",rows,"Columns:",columns)
 print("The matrix is:",result)
 for i in result:
     print(i)
+
+
+#PF-Prac-39
+def max_populated_state(cities_dict,state):
+    max_pop = 0
+    city = ''
+    for items in cities_dict:
+        if items['State'] == state:
+            if int(items['Population'] > max_pop):
+                index1 = cities_dict.index(items)
+                max_pop = items['Population']
+            
+    max_populated_city = cities_dict[index1]
+    
+    return max_populated_city
+    
+cities_dict = [
+{'Name':'Vancouver','State':'WA','Population':161791},
+{'Name':'Salem','State':'OR','Population':154637},
+{'Name':'Seattle','State':'WA','Population':608660},
+{'Name':'Spokane','State':'WA','Population':208916},
+ ]
+state="WA"
+print("The city details are:",cities_dict)
+print("State:",state)
+output=max_populated_state(cities_dict,state)
+print("The highest populated city in the given state is:",output)
