@@ -97,7 +97,6 @@ for i in result:
 #PF-Prac-39
 def max_populated_state(cities_dict,state):
     max_pop = 0
-    city = ''
     for items in cities_dict:
         if items['State'] == state:
             if int(items['Population'] > max_pop):
