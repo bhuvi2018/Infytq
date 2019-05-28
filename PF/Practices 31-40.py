@@ -93,7 +93,37 @@ print("The matrix is:",result)
 for i in result:
     print(i)
 
+#Hackerrank 38
+a=input().split(" ")
+r=int(a[0])
+c=int(a[1])
+def ans(rows, columns):
+    matrix=[]
+    s=""
+    for i in range(0,rows):
+        for j in range(0,columns):
+            if(i==0 and j==0):
+                s=s+"["
+            if(j==0):
+                s=s+"["
+                s=s+"'"+str(i)+","+str(j)+"'"
+            if(j!=0):
+                s=s+" '"+str(i)+","+str(j)+"'"
+            if(j!=(columns-1)):
+                s=s+","
+            if(j==(columns-1) and j==(columns-1) and i!=(rows-1)):
+                s=s+"],"
+            if(j==(columns-1) and i==(rows-1)):
+                s=s+"]]"
+        matrix.append(s)
+        s=""
+    return matrix
 
+matrix=ans(r,c)
+for i in matrix:
+    print(i)
+      
+      
 #PF-Prac-39
 def max_populated_state(cities_dict,state):
     max_pop = 0
