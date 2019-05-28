@@ -98,3 +98,50 @@ Car=Vehicle("BM2009",450000,"FouWheeler")
 Car.set_vehicle_type("FourWheeler")
 Car.calculate_premium()
 Car.display_vehicle_details()
+
+
+#ASS_7
+class Instructor:
+    def __init__(self,instructor_name,exper,avg_feedback,tech_skill):
+        self._instructor_name= instructor_name
+        self._exper=exper
+        self._avg_feedback= avg_feedback
+        self._tech_skill= tech_skill
+        
+    def set_tech_skill(self, tech_skill):
+            self._tech_skill= tech_skill
+
+    def get_tech_skill(self):
+        return self._tech_skill
+        
+    def set_avg_feedback(self, avg_feedback):
+            self._avg_feedback= avg_feedback
+
+    def get_avg_feedback(self):
+        return self._avg_feedback
+        
+    def set_exper(self, exper):
+            self._exper = exper
+
+    def get_exper(self):
+        return self._exper
+        
+    def set_instructor_name(self, exper):
+            self._instructor_name = instructor_name
+
+    def get_instructor_name(self):
+        return self._instructor_name   
+    
+    def check_eligibility(self):
+        if(self._exper==3 and self.allocate_course(self._tech_skill)==True and self._avg_feedback>=4.5):
+            return True
+            
+    def allocate_course(self,_tech_skill):
+        if(not(_tech_skill==None)):
+            return True
+        else:
+            return False
+
+Krish=Instructor("Krish",3,4.6,"Python")
+Krish.allocate_course("Java")
+print(Krish.check_eligibility())
