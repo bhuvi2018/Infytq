@@ -145,3 +145,55 @@ class Instructor:
 Krish=Instructor("Krish",3,4.6,"Python")
 Krish.allocate_course("Java")
 print(Krish.check_eligibility())
+
+
+#OOPR-Assgn-8
+#Start writing your code here
+class Student:
+    def __init__ (self, student_id,marks,age):
+            self.__student_id=student_id
+            self.__age=age
+            self.__marks=marks
+            
+    def set__student_id(self, student_id):
+            self.__student_id = student_id
+
+    def get__student_id(self):
+        return self.__student_id
+    
+    def set__age(self, age):
+            self.__age = age
+
+    def get__age(self):
+        return self.__age   
+    
+    def set__marks(self, marks):
+            self.__marks =marks
+
+    def get__marks(self):
+        return self.__marks
+        
+    def validate_marks(self):
+             if(self.__marks>=0 and self.__marks<=100):
+                 print("True")
+             else:
+                 print("False")
+    def validate_age(self):
+            if(self.__age>20):
+                 print("True")
+            else:
+                 print("False")
+    def check_qualification(self):
+            if(self.__age>20 and self.__marks>=65):
+                 print("True")
+            else:
+                 print("False")
+    
+s1=Student(1,70,21)
+s1.validate_marks()
+s1.validate_age()
+s1.check_qualification()
+s2=Student(1,70,19)
+s2.validate_marks()
+s2.validate_age()
+s2.check_qualification()
