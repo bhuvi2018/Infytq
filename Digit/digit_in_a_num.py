@@ -28,6 +28,7 @@ if(f==0):
 else:
     print("digit's count:",c)
 
+
 #frst digit of a no
 i=int(input())
 while (i>0):
