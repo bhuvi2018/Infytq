@@ -27,15 +27,16 @@ Maria.running()
 
 
 #ASS_3
+#ASS_3
 class Employee:
-    def __init__(self, employee_name, designation):
-        self.employee_name = employee_name
-        self.designation = designation
+    def __init__(self):
+        self.employee_name = None
+        self.designation =None
 
 class Customer:
-    def __init__(self, customer_name,bill_amount):
-        self.customer_name = customer_name
-        self.bill_amount = bill_amount
+    def __init__(self):
+        self.customer_name = None
+        self.bill_amount = None
 
     def purchases(self):
         self.bill_amount=self.bill_amount- self.bill_amount*2/100
@@ -44,14 +45,14 @@ class Customer:
         print(self.customer_name,"pays bill amount of Rs.",self.bill_amount)
         
 class item:
-    def __init__(self, item_id,description,price_per_unit):
-        self.item_id = item_id
-        self.description =description
-        self.price_per_unit = price_per_unit
+    def __init__(self):
+        self.item_id = None
+        self.description =None
+        self.price_per_unit = None
 
-Ram=Customer("Ram",7000)
+Ram=Customer()
 Ram.purchases()
-Ram.pays_bill(7000)
+Ram.pays_bill()
 
 
 #ASS_5
