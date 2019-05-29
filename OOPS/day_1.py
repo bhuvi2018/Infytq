@@ -151,40 +151,40 @@ print(Krish.check_eligibility())
 #Start writing your code here
 class Student:
     def __init__ (self, student_id,marks,age):
-            self.__student_id=student_id
-            self.__age=age
-            self.__marks=marks
+            self._student_id=student_id
+            self._age=age
+            self._marks=marks
             
-    def set__student_id(self, student_id):
-            self.__student_id = student_id
+    def set_student_id(self, student_id):
+            self._student_id = student_id
 
-    def get__student_id(self):
-        return self.__student_id
+    def get_student_id(self):
+        return self._student_id
     
-    def set__age(self, age):
+    def set_age(self, age):
             self.__age = age
 
-    def get__age(self):
-        return self.__age   
+    def get_age(self):
+        return self._age   
     
-    def set__marks(self, marks):
-            self.__marks =marks
+    def set_marks(self, marks):
+            self._marks =marks
 
-    def get__marks(self):
-        return self.__marks
+    def get_marks(self):
+        return self._marks
         
     def validate_marks(self):
-             if(self.__marks>=0 and self.__marks<=100):
+             if(self._marks>=0 and self._marks<=100):
                  print("True")
              else:
                  print("False")
     def validate_age(self):
-            if(self.__age>20):
+            if(self._age>20):
                  print("True")
             else:
                  print("False")
     def check_qualification(self):
-            if(self.__age>20 and self.__marks>=65):
+            if(self._age>20 and self._marks>=65):
                  print("True")
             else:
                  print("False")
