@@ -41,6 +41,20 @@ def create_new_dictionary(prices):
 prices = { 'ACME': 45.23,'AAPL': 612.78,'IBM': 205.55,'HPQ': 37.20,'FB': 10.75}
 print(create_new_dictionary(prices))
 
+#hackerrank3
+import ast
+def cre(p):
+    n=ast.literal_eval(p)
+    new={}
+    for v in n:
+        if n[v]>200.0:
+            new[v]=n[v]
+    s=sorted(new.items())
+    s=dict(s)
+    return s
+p=input()
+print(cre(p))
+
 
 #PF-Prac-4
 def find_nine(nums):
