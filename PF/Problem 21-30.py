@@ -137,3 +137,16 @@ def exchange_list(number_list):
      
 number_list=[1,2,3,4,5,6]
 print(exchange_list(number_list))
+
+
+#hackerrank 29
+
+def exchange(l):
+    m=[]
+    for i in range(len(l)-1,len(l)//2-1,-1):
+        m.append(l[i])
+    for i in range(0,len(l)//2):
+        m.append(l[i])
+    return m
+l=list(map(int,input().split()))
+print(*exchange(l))
