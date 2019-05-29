@@ -27,3 +27,11 @@ if(f==0):
     print("digit not found")
 else:
     print("digit's count:",c)
+
+#frst digit of a no
+i=int(input())
+while (i>0):
+    r=i%10
+    i=i//10
+    
+print(r)
