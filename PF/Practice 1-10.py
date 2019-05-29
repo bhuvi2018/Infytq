@@ -27,6 +27,44 @@ def bracket_pattern(input_str):
 input_str="(())("
 print(bracket_pattern(input_str))
 
+#hackerrank test 1 balanced-brackets
+mport math
+import os
+import random
+import re
+import sys
+
+def validpairs(left,right):
+    if left=='(' and right==')':
+        return True
+    if left=='[' and right==']':
+        return True
+    if left=='{' and right=='}':
+        return True
+    return False
+
+def isnested(S):
+    stack=[]
+    for s in S:
+        if s=='(' or s=='[' or s=='{':
+            stack.append(s)
+        else:
+            if(len(stack)==0):
+                return False
+            last=stack.pop()
+            if not validpairs(last,s):
+                return False
+    if(len(stack)!=0):
+        return False
+    return True
+N=int(input())
+for _ in range(N):
+    s=input()
+    if(isnested(s)):
+        print("YES")
+    else:
+        print("NO")
+	
 
 #PF-Prac-3
 
