@@ -36,3 +36,7 @@ while (i>0):
     i=i//10
     
 print(r)
+
+#alternate
+a=input()
+print(a[0])
