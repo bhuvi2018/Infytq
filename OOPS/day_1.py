@@ -143,10 +143,10 @@ Car.display_vehicle_details()
 #ASS_7
 class Instructor:
     def __init__(self):
-        self.__instructor_name= None
-        self.__experience=None
-        self.__avg_feedback= None
-        self.__technology_skill= None
+        self.__instructor_name= "Krish"
+        self.__experience=2
+        self.__avg_feedback=4.6
+        self.__technology_skill="Java"
             
     def set_technology_skill(self, technology_skill):
             self.__technology_skill= technology_skill
@@ -170,21 +170,25 @@ class Instructor:
             self.__instructor_name = instructor_name
 
     def get_instructor_name(self):
-        return self.__instructor_name   
-    
-    def check_eligibility(self):
-        if(self.__experience==3 and self.allocate_course(self._tech_skill)==True and self.__avg_feedback>=4.5):
-            return True
-            
+        return self.__instructor_name  
+        
     def allocate_course(self,technology):
         if((technology==self.__technology_skill) or (technology=="C++")):
             return True
         else:
             return False
+    
+    def check_eligibility(self):
+        if(self.__experience>3 and self.__avg_feedback>=4.5):
+            return True
+        elif(self.__experience<=3 and self.__avg_feedback>=4):
+            return True
+        else:
+            return False
 
 Krish=Instructor()
-Krish.set_technology_skill(["java","python"])
 print(Krish.allocate_course("Java"))
+print(Krish.check_eligibility())
 
 
 #OOPR-Assgn-8
