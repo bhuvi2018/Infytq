@@ -162,10 +162,10 @@ print(Krish.allocate_course("Java"))
 #OOPR-Assgn-8
 #Start writing your code here
 class Student:
-    def __init__ (self, student_id,marks,age):
-            self._student_id=student_id
-            self._age=age
-            self._marks=marks
+    def __init__ (self):
+            self._student_id=None
+            self._age=None
+            self._marks=None
             
     def set_student_id(self, student_id):
             self._student_id = student_id
@@ -174,7 +174,7 @@ class Student:
         return self._student_id
     
     def set_age(self, age):
-            self.__age = age
+            self._age = age
 
     def get_age(self):
         return self._age   
@@ -201,14 +201,13 @@ class Student:
             else:
                  print("False")
     
-s1=Student(1,70,21)
+s1=Student()
+s1.set_marks(90)
+s1.set_age(21)
+s1.set_student_id("BB")
 s1.validate_marks()
 s1.validate_age()
 s1.check_qualification()
-s2=Student(1,70,19)
-s2.validate_marks()
-s2.validate_age()
-s2.check_qualification()
 
 
 #ASS 9
