@@ -37,5 +37,5 @@ class Ticket:
             self.__ticket_id=self.__source[0]+self.__destination[0]+a
             
             
-kali=Ticket("John","DelHi","Kolkata")
-kali.generate_ticket()
+John=Ticket("John","DelHi","Kolkata")
+John.generate_ticket()
