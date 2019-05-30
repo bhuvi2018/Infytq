@@ -54,7 +54,7 @@ Ram=Customer()
 Ram.purchases()
 Ram.pays_bill()
 
-
+#ASS 5
 class Vehicle:
     def __init__(self):
         self.__vehicle_id = None
@@ -114,49 +114,49 @@ Car.display_vehicle_details()
 
 #ASS_7
 class Instructor:
-    def __init__(self,instructor_name,exper,avg_feedback,tech_skill):
-        self._instructor_name= instructor_name
-        self._exper=exper
-        self._avg_feedback= avg_feedback
-        self._tech_skill= tech_skill
-        
-    def set_tech_skill(self, tech_skill):
-            self._tech_skill= tech_skill
+    def __init__(self):
+        self.__instructor_name= None
+        self.__experience=None
+        self.__avg_feedback= None
+        self.__technology_skill= None
+            
+    def set_technology_skill(self, technology_skill):
+            self.__technology_skill= technology_skill
 
-    def get_tech_skill(self):
-        return self._tech_skill
+    def get_technology_skill(self):
+        return self.__technology_skill
         
     def set_avg_feedback(self, avg_feedback):
-            self._avg_feedback= avg_feedback
+            self.__avg_feedback= avg_feedback
 
     def get_avg_feedback(self):
         return self._avg_feedback
         
-    def set_exper(self, exper):
-            self._exper = exper
+    def set_experience(self, experience):
+            self.__experience = experience
 
-    def get_exper(self):
-        return self._exper
+    def get_experience(self):
+        return self._experience
         
-    def set_instructor_name(self, exper):
-            self._instructor_name = instructor_name
+    def set_instructor_name(self, instructor_name):
+            self.__instructor_name = instructor_name
 
     def get_instructor_name(self):
-        return self._instructor_name   
+        return self.__instructor_name   
     
     def check_eligibility(self):
-        if(self._exper==3 and self.allocate_course(self._tech_skill)==True and self._avg_feedback>=4.5):
+        if(self.__experience==3 and self.allocate_course(self._tech_skill)==True and self.__avg_feedback>=4.5):
             return True
             
-    def allocate_course(self,_tech_skill):
-        if(not(_tech_skill==None)):
+    def allocate_course(self,technology):
+        if((technology==self.__technology_skill) or (technology=="C++")):
             return True
         else:
             return False
 
-Krish=Instructor("Krish",3,4.6,"Python")
-Krish.allocate_course("Java")
-print(Krish.check_eligibility())
+Krish=Instructor()
+Krish.set_technology_skill(["java","python"])
+print(Krish.allocate_course("Java"))
 
 
 #OOPR-Assgn-8
