@@ -13,20 +13,18 @@ Jill=Employee("Jill",27,40000)
 #OOPR-Exer-4
 class Athlete:
     def __init__(self,name,gender):
-        self._name=name
-        self._gender=gender
+        self.__name=name
+        self.__gender=gender
 
     def running(self):
-        if(self._gender=="girl"):
+        if(self.__gender=="girl"):
             print("150mtr running")
         else:
             print("200mtr running")
+k=Athlete("Maria","girl")
+k.running()
 
-Maria=Athlete("Maria","girl")
-Maria.running()
 
-
-#ASS_3
 #ASS_3
 class Employee:
     def __init__(self):
