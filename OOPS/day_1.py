@@ -55,7 +55,9 @@ k=Athlete("Maria","girl")
 k.running()
 
 
-#ASS_3
+#OOPR-Assgn-3
+#Start writing your code here
+
 class Employee:
     def __init__(self):
         self.employee_name = None
@@ -77,12 +79,10 @@ class item:
         self.item_id = None
         self.description =None
         self.price_per_unit = None
-
-Ram=Customer()
-Ram.purchases()
-Ram.pays_bill()
-
-#ASS 5
+        
+        
+#OOPR-Assgn-5
+#Start writing your code here
 class Vehicle:
     def __init__(self):
         self.__vehicle_id = None
@@ -115,10 +115,9 @@ class Vehicle:
         return self.__vehicle_type
     
     def calculate_premium(self):
-        if(self.__vehicle_type=="TwoWheeler"):
+        if(self.__vehicle_type=="Two Wheeler"):
             self.__premium_amount=self.__vehicle_cost*2/100
-            print(self.__premium_amount)
-        elif(self.__vehicle_type=="FourWheeler"):
+        elif(self.__vehicle_type=="Four Wheeler"):
             self.__premium_amount=self.__vehicle_cost*6/100
             print(self.__premium_amount)
         else:
@@ -140,7 +139,8 @@ Car.set_vehicle_id(111)
 Car.display_vehicle_details()
 
 
-#ASS_7
+#OOPR-Assgn-7
+#Start writing your code here
 class Instructor:
     def __init__(self):
         self.__instructor_name= "Krish"
@@ -195,46 +195,46 @@ print(Krish.check_eligibility())
 #Start writing your code here
 class Student:
     def __init__ (self):
-            self._student_id=None
-            self._age=None
-            self._marks=None
+            self.__student_id=None
+            self.__age=None
+            self.__marks=None
             
     def set_student_id(self, student_id):
-            self._student_id = student_id
+            self.__student_id = student_id
 
     def get_student_id(self):
-        return self._student_id
+        return self.__student_id
     
     def set_age(self, age):
-            self._age = age
+            self.__age = age
 
     def get_age(self):
-        return self._age   
+        return self.__age   
     
     def set_marks(self, marks):
-            self._marks =marks
+            self.__marks =marks
 
     def get_marks(self):
-        return self._marks
+        return self.__marks
         
     def validate_marks(self):
-             if(self._marks>=0 and self._marks<=100):
-                 print("True")
+             if(self.__marks>=0 and self.__marks<=100):
+                 return True
              else:
-                 print("False")
+                 return False
     def validate_age(self):
-            if(self._age>20):
-                 print("True")
+            if(self.__age>20):
+                 return True
             else:
-                 print("False")
+                 return False
     def check_qualification(self):
-            if(self._age>20 and self._marks>=65):
-                 print("True")
+            if(self.validate_age() and self.__marks>=65 and self.validate_marks()):
+                 return True
             else:
-                 print("False")
+                 return False
     
 s1=Student()
-s1.set_marks(90)
+s1.set_marks(65)
 s1.set_age(21)
 s1.set_student_id("BB")
 s1.validate_marks()
@@ -242,81 +242,77 @@ s1.validate_age()
 s1.check_qualification()
 
 
-#ASS 9
+#OOPR-Assgn-9
+#Implement Student class here
 class Student:
-    def __init__ (self, student_id,marks,age):
-            self.__student_id=student_id
-            self.__age=age
-            self.__marks=marks
+    def __init__ (self):
+            self.__student_id=None
+            self.__age=None
+            self.__marks=0
             self.__course_id=None
             self.__fees=None
             
-    def set__student_id(self, student_id):
+    def set_student_id(self, student_id):
             self.__student_id = student_id
 
-    def get__student_id(self):
+    def get_student_id(self):
         return self.__student_id
     
-    def set__age(self, age):
+    def set_age(self, age):
             self.__age = age
 
-    def get__age(self):
+    def get_age(self):
         return self.__age   
     
-    def set__marks(self, marks):
+    def set_marks(self, marks):
             self.__marks =marks
 
-    def get__marks(self):
+    def get_marks(self):
         return self.__marks
         
-    def set__marks(self, course_id):
-            self.__course_id =course_id
-        
-    def get__course_id(self):
+    def get_course_id(self):
         return self.__course_id
-        
-    def set__fees(self, fees):
-        if(course_id==1001):
-            self.__fees =25575.0
-        else:
-            self.__fees =15500.0
 
-    def get__fees(self):
+    def get_fees(self):
         return self.__fees
         
     def validate_marks(self):
              if(self.__marks>=0 and self.__marks<=100):
-                 print("True")
+                 return True
              else:
-                 print("False")
+                 return False   
+    
     def validate_age(self):
             if(self.__age>20):
-                 print("True")
+                 return True
             else:
-                 print("False")
+                 return False
+                 
     def check_qualification(self):
-            if(self.__age>20 and self.__marks>=65):
+            if(self.__age>20 and self.__marks>=65 and self.validate_marks()):
                  return True
             else:
                  return False
         
     def choose_course(self,course_id):
-        if(self.check_qualification()):
-            self.course_id=self.get__fees()
-            if(self.__marks>80):
-                self.__fees=self.__fees-(self.fees*25/100)
-                return True
+        if(self.check_qualification() and (course_id==1001 or course_id==1002)):
+            self.__course_id=course_id
+            if(course_id==1001):
+                self.__fees=25575.0
+            elif(course_id==1002):
+                self.__fees=15500.0
+            if(self.__marks>85):
+                self.__fees=self.__fees-(self.__fees*25/100)
+            return True
         return False
-            
-        
     
-s1=Student(1,70,21)
-s1.set__student_id(1004)
-s1.set__age(21)
-s1.set__marks(65)
-if(s1.check_qualification()):
+maddy=Student()
+maddy.set_student_id(1001)
+maddy.set_age(21)
+maddy.set_marks(84)
+if(maddy.check_qualification()):
     print("Student has qualified")
-    if(s1.choose_course(1002)):
+    if(maddy.choose_course(1002)):
         print("Course allocated")
     else:
         print("Invalid course id")
