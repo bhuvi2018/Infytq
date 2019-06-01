@@ -59,3 +59,30 @@ class JugglingItem:
 s=JugglingItem("Balls")
 Jack=Juggler("Jack")
 Jack.juggles(s.get_name())
+
+
+#ASS 15
+class Parrot:
+    __counter=7000
+    def __init__(self,name,color):
+        self.__name=name
+        self.__color=color
+        Parrot.__counter+=1
+        self.__unique_number=Parrot.__counter
+        
+        
+    def get_color(self):
+        return __self.color
+    
+    def get_name(self):
+        return __self.name
+    
+    def get_unique_number(self):
+        return __uniqe_number
+        
+p=Parrot("kali","red")
+k=Parrot("guru","yellow")
+p=Parrot("kali","red")
+k=Parrot("guru","yellow")
+p=Parrot("kali","red")
+k=Parrot("guru","yellow")
