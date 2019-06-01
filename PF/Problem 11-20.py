@@ -95,7 +95,7 @@ def check_22(num_list):
 print(check_22([3,2,5,1,2,1,2,2]))
 
 
-#PF-Prac-16
+#PF-Prac-16 Right Rotation
 def rotate_list(input_list,n):
     output_list=[]
     for i in range(len(input_list)-n,len(input_list)):
@@ -107,3 +107,31 @@ def rotate_list(input_list,n):
 input_list= [1,2,3,4,5,6]
 output_list=rotate_list(input_list,4)
 print(output_list)
+
+
+#Left Rotation
+import math
+import os
+import random
+import re
+import sys
+
+def rot(input_list,n):
+    out=[]
+    for i in range(n,len(input_list)):
+        out.append(input_list[i])
+    for i in range(0,n):
+        out.append(input_list[i])
+    return out
+
+if __name__ == '__main__':
+    
+    nd = input().split()
+
+    n = int(nd[0])
+
+    d = int(nd[1])
+
+    a = list(map(int, input().rstrip().split()))
+    out=rot(a,d)
+    print(*out)
