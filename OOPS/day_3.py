@@ -80,9 +80,5 @@ class Parrot:
     def get_unique_number(self):
         return __uniqe_number
         
-p=Parrot("kali","red")
-k=Parrot("guru","yellow")
-p=Parrot("kali","red")
-k=Parrot("guru","yellow")
-p=Parrot("kali","red")
-k=Parrot("guru","yellow")
+p=Parrot("k","red")
+k=Parrot("g","yellow")
