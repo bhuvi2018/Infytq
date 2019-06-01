@@ -28,3 +28,42 @@ def roam(n):
     ones=i[n%10]
     print(thousands+hundreds+tens+ones)
 roam(n)
+
+
+#roman - number
+def v(s):
+    if s=="I":
+        return 1
+    if s=="V":
+        return 5
+    if s=="X":
+        return 10
+    if s=="L":
+        return 50
+    if s=="C":
+        return 100
+    if s=="D":
+        return 500
+    if s=="M":
+        return 1000
+    return -1
+def r(ss):
+    q=0
+    i=0
+    while(i<len(ss)):
+        s1=v(ss[i])
+        if(i+1<len(ss)):
+            s2=v(ss[i+1])
+            if s1>=s2:
+                q+=s1
+                i=i+1
+            else:
+                q+=s2-s1
+                i=i+2
+        else:
+            q+=s1
+            i=i+1
+    return q
+
+m=input()
+print(r(m))
