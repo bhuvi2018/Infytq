@@ -7,6 +7,8 @@ def check_numbers(num1,num2):
             if(i%j==0 and i not in num_list and i!=j):
                 num_list.append(i)
     count=len(num_list)
+    'o/p: [{20, 22, 24, 26, 28, 30}, 6]'
+    'num_list=set(num_list)'
     return [num_list,count]
 
 num1=2
