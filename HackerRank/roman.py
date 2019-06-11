@@ -29,6 +29,24 @@ def roam(n):
     print(thousands+hundreds+tens+ones)
 roam(n)
 
+#roman to number 1
+def rom_to_int(s):
+
+    t=[['M',1000],['CM',900],['D',500],['CD',400],['C',100],
+    ['XC',90],['L',50],['XL',40],['X',10],['IX',9],['V',5],['IV',4],['I',1]]
+    r=0
+    for p in t:
+        c=True
+        while c:
+            if len(s)>=len(p[0]):
+                if s[0:len(p[0])]==p[0]:
+                    r+=p[1]
+                    s=s[len(p[0]):]
+                else: break
+            else: break
+
+    return r
+print(rom_to_int("MMMDCCLVI"))
 
 #roman - number
 def v(s):
