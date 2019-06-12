@@ -27,3 +27,7 @@ CONSTRAINT match_mid_pk PRIMARY KEY(MId,TId),
 CONSTRAINT match_player_ck CHECK(Player1<>Player2)
 );
 
+#ex6
+ALTER TABLE Player ADD (MatchesPlayed INTEGER,MatchesWon INTEGER)
+
+#ex7
