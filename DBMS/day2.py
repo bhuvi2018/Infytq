@@ -31,3 +31,61 @@ CONSTRAINT match_player_ck CHECK(Player1<>Player2)
 ALTER TABLE Player ADD (MatchesPlayed INTEGER,MatchesWon INTEGER)
 
 #ex7
+ALTER TABLE Player DROP (ContactNo)
+
+#ex8
+ALTER TABLE Player RENAME COLUMN PId TO PlayerId
+
+#ex9
+ALTER TABLE Player MODIFY PName VARCHAR2(50)
+
+#col2
+CREATE TABLE Shopper(
+ShopperId INTEGER  PRIMARY KEY,
+ShopperName VARCHAR2(20) NOT NULL,
+GENDER CHAR(6) CONSTRAINT shopper_gender_cK  CHECK(GENDER IN('Male','Female')),
+MobileNo INTEGER NOT NULL,
+Address VARCHAR2(50)
+)
+
+#col3
+ALTER TABLE Shopper MODIFY MobileNo VARCHAR2(15)
+
+#ass4
+CREATE TABLE Article(
+ArCode CHAR(5) PRIMARY KEY  CHECK(ArCode LIKE 'A%'),
+ArName VARCHAR2(30) NOT NULL,
+RATE NUMBER(8,2),
+Quantity NUMBER(4) DEFAULT 0 CHECK(Quantity>=0),
+Class CHAR(1) CHECK(Class IN('A','B','C'))
+)
+
+#ass
+CREATE TABLE Store(
+Name VARCHAR2(20) PRIMARY KEY,
+Location VARCHAR2(30) NOT NULL,
+ManagerName VARCHAR2(30) UNIQUE
+)
+
+#ass6
+ALTER TABLE Store RENAME COLUMN Name TO StoreName
+
+#ass7
+CREATE TABLE Bill(
+BillNo NUMBER PRIMARY KEY,
+StoreName VARCHAR2(20) REFERENCES Store(StoreName),
+ShopperId NUMBER REFERENCES Shopper(ShopperId),
+Arcode CHAR(5) REFERENCES Article(ArCode),
+Amount NUMBER,
+BillDate DATE,
+Quantity NUMBER(4) DEFAULT 1 CHECK(Quantity>0)
+)
+
+#ass8
+CREATE TABLE Supplier(
+SupplierId VARCHAR2(6) PRIMARY KEY,
+Name VARCHAR2(30),
+ContactNo VARCHAR2(15) NOT NULL,
+EmailId VARCHAR2(30)
+)
+
